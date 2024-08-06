@@ -38,4 +38,5 @@ else{
 }
 $owner = $_COOKIE['username'];
 
-$db->add_topic($themename, $viewpriv, $viewprivd, $writepriv, $writeprivd, $owner);
+$id = $db->add_topic($themename, $viewpriv, $viewprivd, $writepriv, $writeprivd, $owner);
+header("Location: /topic?id=$id");
