@@ -12,7 +12,7 @@ class search_data extends user_mysql_db{
         return $t->fetch_row();
     }
 
-    private function table_exist($table_name) : bool {
+    protected function table_exist($table_name) : bool {
         $t = self::$mysqli->query("SHOW TABLES like '$table_name';");
         return (bool) $t->fetch_row();
     }
