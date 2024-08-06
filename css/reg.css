@@ -1,0 +1,122 @@
+.registration_block{
+    color-scheme: dark;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    /* position: absolute;
+    left:0;
+    top:0;
+    width:100vw;
+    height:100vh; */
+}
+.login_input, .password_input, .submit_input{
+    position: relative;
+    color-scheme: dark;
+    font-size: 6dvh;
+    
+    
+    height: 15%;
+    transition: 0.5s;
+    width:80%;
+
+}
+
+.login_input::placeholder, .password_input::placeholder {
+    text-align: center; 
+}
+.submit_input{
+    padding: 1px 2px;
+    background-color: rgb(59, 59, 59);
+    border: 1.6px solid rgb(133, 133, 133);
+    color: rgb(117, 117, 117);
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+}
+.page_name{
+    font-size: 6dvh;
+    color:white;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    user-select: none;
+    justify-content: center;
+
+}
+
+.submit_input:hover{
+    background-color: white;
+    color: black;
+    border: 1.6px solid rgb(118, 118, 118);
+
+}
+
+
+@media (pointer:coarse) {
+    .submit_input:hover{
+        background-color: rgb(59, 59, 59);
+        border: 1.6px solid rgb(133, 133, 133);
+        color: rgb(117, 117, 117);
+    }
+    .submit_input:active{
+        background-color: white;
+        color: black;
+        border: 1.6px solid rgb(118, 118, 118);
+
+    }
+
+}
+
+
+@media (min-width: 80vh) {
+    body{
+        background-color: rgb(28, 0, 17);
+        
+    }
+    .registration_block{
+        left:calc(50vw - 25dvh);
+        top:25dvh;
+        position:absolute;
+        width:50dvh;
+        height:50dvh;
+        border-radius: 10px;
+        
+    }
+    .login_input, .password_input, .submit_input{
+        position: relative;
+
+        font-size: 6dvh;
+        
+        
+        height: 15%;
+        transition: 0.5s;
+        width:80%;
+
+    }
+
+
+    .submit_input{
+        user-select:none;
+    }
+
+}
+
+
+@media (max-width: 80vh) {
+    .registration_block{
+        position: absolute;
+        left:0;
+        top:0;
+        width:100vw;
+        height:100vh;
+    }
+
+    .submit_input{
+        user-select:none;
+    }
+}
